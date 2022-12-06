@@ -1,0 +1,15 @@
+.textos1{
+    font-weight: bold !important;
+ }
+ 
+ .imagem{
+     background-image: url('./img1.jpg') ;
+     background-repeat: no-repeat;
+     width: 50vh;
+     min-height: 50vh;
+     background-position: center;
+ }
+ 
+ .text-decorator-none{
+     text-decoration: none;
+ }

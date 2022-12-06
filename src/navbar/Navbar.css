@@ -1,0 +1,16 @@
+.cursor {
+    cursor: pointer;
+    color: white;
+}
+.barprincipal{
+    background-color: #B7D7D9 !important;
+    padding: 10px !important;
+}
+.text-decorator-none {
+    text-decoration: none;
+}
+.barFlex{
+    display: flex;
+    justify-content: space-between;
+    background-color: #B7D7D9;
+}
