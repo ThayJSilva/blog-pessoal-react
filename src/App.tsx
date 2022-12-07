@@ -1,31 +1,37 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './paginas/home/Home';
-import './App.css';
 import Login from './paginas/login/Login';
+import './App.css';
+import CadastroTema from './components/temas/cadastroTema/CadastroTema';
+import DeletarTema from './components/temas/deletarTema/DeletarTema';
+import { Provider } from 'react-redux';
+import store from './store/Store';
 import Navbar from './navbar/Navbar';
 import CadastroUsuario from './paginas/cadastroUsuario/cadastroUsuario';
 import ListaTema from './components/temas/listaTema/ListaTema';
 import ListaPostagem from './components/postagem/listapostagem/ListaPostagem';
-import Footer from './estaticos/footer/Footer';
-import DeletarTema from './components/temas/deletarTema/DeletarTema';
-import DeletarPostagem from './components/postagem/deletarPostagem/DeletarPostagem';
-import CadastroTema from './components/temas/cadastroTema/CadastroTema';
 import CadastroPost from './components/postagem/cadastroPosts/CadastroPost';
+import DeletarPostagem from './components/postagem/deletarPostagem/DeletarPostagem';
+import Footer from './estaticos/footer/Footer';
+
 
 function App() {
   return (
+    
+     <Provider store={store}>
     <Router>
       <Navbar />
-      <Routes>
-
+    
+        <div style={{ minHeight: '100vh' }}>
+        <Routes>
         <Route path="/" element={<Login />} />
-
-        <Route path="/home" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
 
-        <Route path="/cadastro" element={<CadastroUsuario />} />
+        <Route path="/home" element={<Home />} />
+
+        <Route path="/cadastrousuario" element={<CadastroUsuario />} />
 
         <Route path="/temas" element={<ListaTema />} />
 
@@ -44,11 +50,12 @@ function App() {
         <Route path="/deletarTema/:id" element={<DeletarTema />} />
 
 
-
-      </Routes>
+        </Routes>
+        </div>
+     
       <Footer />
     </Router>
-
+    </Provider>
   );
 }
 
