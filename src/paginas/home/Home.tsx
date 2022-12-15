@@ -8,6 +8,7 @@ import {Box} from '@mui/material';
 import ModalPostagem from '../../components/postagem/modelPostagem/ModalPostagem';
 import { TokenState } from '../../store/tokens/tokenReducer';
 import TabPostagem from '../../components/postagem/tabPostagem/TabPostagem';
+import { toast } from 'react-toastify';
 
 function Home() {
 
@@ -18,10 +19,18 @@ function Home() {
     
     useEffect(() => {
       if (token == "") {
-          alert("Você precisa estar logado")
-          navigate("/login")
-  
-      }
+        toast.info('Usuario deslogado!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+         });
+         navigate("/login")
+        }
   }, [token])
     return (
         <>
