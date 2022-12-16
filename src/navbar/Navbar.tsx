@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useSelector } from 'react-redux';
+
 import { useDispatch } from "react-redux";
+
 import { Box } from '@mui/material';
+import { toast } from 'react-toastify';
 import { TokenState } from '../store/tokens/tokenReducer';
 import { addToken } from '../store/tokens/action';
-import { toast } from 'react-toastify';
 
 function Navbar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -19,15 +21,16 @@ function Navbar() {
 
     function goLogout() {
         dispatch(addToken(''));
-        toast.info('Usuario deslogado!', {
+
+        toast('usuario deslogado!', {
             position: "top-right",
-            autoClose: 2000,
+            autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "colored",
+            theme: "light",
         });
         navigate('/login')
     }
@@ -35,11 +38,11 @@ function Navbar() {
     var navbarComponent;
 
     if (token != "") {
-        navbarComponent = <AppBar position="static">
-            <Toolbar variant="dense">
+        navbarComponent = <AppBar className="containerA" position="static" style={{ backgroundColor: "#C2185B" }}>
+            <Toolbar variant="dense" className="containerA">
                 <Box className='cursor'>
                     <Typography variant="h5" color="inherit">
-                        BlogPessoal
+                        Donate Happy
                     </Typography>
                 </Box>
 

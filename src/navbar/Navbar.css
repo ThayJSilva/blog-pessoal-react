@@ -6,3 +6,7 @@
 .text-decorator-none{
     text-decoration: none;
 }
+.containerA{
+    display: flex;
+    justify-content: space-between;
+}
