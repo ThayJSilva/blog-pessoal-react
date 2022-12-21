@@ -41,9 +41,9 @@ function Footer(){
         </Box>
         <Box style={{ backgroundColor: "#C2185B", height: "60px" }}>
             <Box paddingTop={1}>
-                <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2020 Copyright:</Typography>
+                <Typography align="center" gutterBottom style={{ color: "white" }} >© 2022 Copyright:</Typography>
             </Box>
-            <Box>
+            <Box className="text-decoration-none"  >
                 <a target="_blank" href="https://brasil.generation.org">
                     <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">brasil.generation.org</Typography>
                 </a>

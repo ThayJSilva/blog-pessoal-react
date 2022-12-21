@@ -2,7 +2,10 @@
     background-color: #3F51B5;
     height: 120px;
 }
-
+.text-decoration-none a{
+    text-decoration: none !important;
+    color: white;
+}
 .box2{
     background-color: #303F9F;
     height: 60px;

@@ -15,7 +15,7 @@ function TabPostagem() {
     <>
       <TabContext value={value}>
         <AppBar position="static">
-          <Tabs centered indicatorColor="secondary" onChange={handleChange}>
+          <Tabs centered className='tabColor' onChange={handleChange}>
             <Tab label="Todas as postagens" value="1"/>
             <Tab label="Sobre-nós" value="2" />
           </Tabs>
@@ -27,7 +27,12 @@ function TabPostagem() {
         </TabPanel>
         <TabPanel value="2">
           <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+          <Typography variant="body1" gutterBottom color="textPrimary" align="center" className='titulo'> <h2>O que significa doação?</h2>
+          <h3> Em primeiro lugar, a doação é um ato de desapego e amor ao próximo.</h3>
+         <h4> Quando se fala em doação, estamos falando em ajudar uma pessoa na qual não conhecemos, em fazer o bem sem olhar a quem, falamos em oferecer aquilo que não nos fará falta, e também em entregar e ceder aquilo que será exatamente tudo para o outro.
+          Criamos um afeto desnecessário com alguns objetos e por isso guardamos roupas,sapatos, brinquedos, utensílios e etc... que nunca mais vamos usar. Nesse caso, não seria muito mais útil entregar essas peças para alguém que realmente vai aproveitar? Qual é a ideia! 
+          Posta aqui no blog tudo aquilo no qual você não utiliza mais e que esteja em bom estado, deixando seu contato para que Empresas, Ongs ou Pessoas fisicas na qual se interessar pelo objeto, entre em contato para está indo retirar o mesmo no local indicado.
+          Obrigado aos doadores!</h4> </Typography>
         </TabPanel>
       </TabContext>
     </>

@@ -6,7 +6,6 @@ import { Card, CardActions, CardContent, Button, Typography } from '@material-ui
 import './ListaPostagem.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
-
 import { Box } from '@mui/material';
 import { TokenState } from '../../../store/tokens/tokenReducer';
 import { toast } from 'react-toastify';

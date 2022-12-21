@@ -4,11 +4,9 @@ import {Button, Grid, Typography} from '@material-ui/core'
 import { lightGreen } from "@material-ui/core/colors";
 import { Box } from "@mui/material";
 import Doar2 from "../../img/doar2.jpg"
-
 import useLocalStorage from "react-use-localstorage";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-
 import { toast } from "react-toastify";
 import { TokenState } from "../../store/tokens/tokenReducer";
 import TabPostagem from "../../components/postagem/tabPostagem/TabPostagem";
@@ -24,7 +22,7 @@ function Home() {
     
     useEffect(() => {
       if (token == "") {
-        toast.info('🦄 voce precisa estar logado!', {
+        toast.info('voce precisa estar logado!', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -51,7 +49,7 @@ function Home() {
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
-                        <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>Postagens</Button>
+                        <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#C2185B", color: "white" }}>Postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
